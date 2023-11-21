@@ -1,0 +1,49 @@
+<h3>Hello Mr.   <span style="color: green; font-weight: bolder;">{{username}}</span></h3>
+<div id="dashboard" class=" mt-5 container">
+    <div class="d-flex justify-content-center">
+        <div class="col-md-3 bg-info ms-5 p-4 rounded">
+            <h2>Deposit</h2>
+            <p class="fs-3">
+                $ <span id="deposit">{{totalDepositAmount}}</span>
+            </p>
+        </div>
+        <div class="col-md-3 bg-success ms-5 p-4 rounded">
+            <h2>Withdraw</h2>
+            <p class="fs-3">
+                $ <span id="withdraw">{{totalWithdrawAmount}}</span>
+            </p>
+        </div>
+        <div class="col-md-3 bg-primary ms-5 p-4 rounded">
+            <h2>Balance</h2>
+            <p class="fs-3">
+                $ <span id="balance">{{balance}}</span>
+            </p>
+        </div> 
+    </div>
+
+    <div id="input-section" class="mt-5 d-flex justify-content-center">
+        <div class="col-md-5 container rounded shadow p-4">
+            <h3>Deposit</h3>
+            <input type="number" class="form-control" id="deposit-input" placeholder="Deposit" [(ngModel)]="depositAmount">
+            <br>
+            <button class="btn btn-success" id="deposit-btn" (click)="deposit()">Deposit</button>
+          </div>
+        <div class="col-md-5 container rounded shadow p-4">
+            <h3>Withdraw</h3>
+            <input type="number" class="form-control" id="withdraw-input" placeholder="Withdraw" [(ngModel)]="withdrawAmount">
+            <br>
+            <button class="btn btn-success" id="withdraw-btn" (click)="withdraw()">Withdraw</button>
+        </div>
+    </div>
+
+    <div id="transfer-section" class="mt-5 d-flex justify-content-center">
+        <div class="col-md-5 container rounded shadow p-4">
+          <h3>Transfer</h3>
+          <input type="number" class="form-control" id="transfer-amount" placeholder="Amount" [(ngModel)]="transferAmount">
+          <br>
+          <input type="text" class="form-control" id="recipient-email" placeholder="Recipient's Email" [(ngModel)]="recipientEmail">
+          <br>
+          <button class="btn btn-success" id="transfer-btn" (click)="transfer()">Transfer</button>
+        </div>
+      </div>
+</div>
